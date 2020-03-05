@@ -102,7 +102,7 @@ sendAlertMessageAtFormSubmit = () => {
   //   return false;
   // } else {
   //document.getElementById('submitBtn').data-target = "#myModal"
-  document.getElementById("retURL").value= "/index.html?product="+product;  //setting up path after submitting form
+  document.getElementById("retURL").value= "http://help.eternussolutions.com/index.html?product="+product;  //setting up path after submitting form
   document.getElementById('ticketDisplay').innerHTML = ticketNumber;
   onsubmit = $('#myModal').modal();
   document.getElementById('closeBtn').onclick = () => {
