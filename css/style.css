@@ -1,0 +1,85 @@
+#imgPreView {
+  /* border: 1px solid black; */
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 0px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.hrSmall {
+  border-width: 2px;
+  border-color: darkorange;
+  background-color: darkorange;
+}
+
+.hrLarge {
+  border-width: 4px;
+  border-color: darkorange;
+  background-color: darkorange;
+}
+
+.btn-primary {
+  background-color: #0495c9;
+  border: none;
+  color: white;
+  width: 120px;
+  border-radius: 2px;
+  height: 30px;
+  font-weight: bold;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #00b3db;
+  border-color: #285e8e;
+}
+
+.submitBtn {
+  border: none;
+  color: white;
+  background-color: darkorange;
+  width: 120px;
+  border-radius: 2px;
+  height: 30px;
+  font-weight: bold;
+}
+
+.submitBtn:hover,
+.submitBtn:focus,
+.submitBtn:active,
+.submitBtn.active,
+.open > .dropdown-toggle.submitBtn {
+  color: #fff;
+  background-color: #f57b42;
+}
+
+.row {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.dataDiv {
+  background-color: grey;
+}
+
+textarea{
+    resize: none;
+}
+
+.dataDiv{
+    background-color: #F4F4F4;
+    margin: 20px;
+    padding: 20px;
+    border-top: 0.2px solid #D8D8D8;
+    border-bottom: 0.2px solid #D8D8D8;
+}
+
+.fa {
+  margin-left: -12px;
+  margin-right: 8px;
+}

@@ -1,0 +1,229 @@
+{
+   "completedHtml": "<meta http-equiv='refresh' content='0; url = http://192.168.100.61:5500/index.html?product=enterceptor'/>",
+   
+   "pages": [
+    {
+     "name": "enterceptor_page",
+     "elements": [
+      {
+       "type": "html",
+       "name": "enterceptor_page_head",
+       "html": "<h3><center>Welcome to Enterceptor FAQ's Section</center></h3>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "enterceptor_page_question",
+       "title": "Which kind of queries you have?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "dashboard",
+         "text": "Dashboard"
+        },
+        {
+         "value": "power_bi_report",
+         "text": "Power Bi Reports"
+        },
+
+        {
+         "value": "software_issue",
+         "text": "Software Issues"
+        }
+       ]
+      }
+     ]
+    },
+
+
+
+
+
+
+    {
+     "name": "enterceptor_dashboard_page",
+     "elements": [
+      {
+       "type": "html",
+       "name": "enterceptor_dashboard_page_head",
+       "html": "<h3><center>Sorry for inconvenience you are facing while using Dashboards </center></h3>"
+      },
+      {
+       "type": "radiogroup",
+       "name": "dashboard_problem_question",
+       "title": "what kind of problems you are facing in dashboards?",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "dashboard_not_show_data",
+         "text": "Dashboard is not showing Report/Data properly"
+        },
+        {
+         "value": "dashboard_not_start",
+         "text": "Dashboard does not start"
+        },
+        {
+         "value": "other_query",
+         "text": "Other Queries"
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{enterceptor_page_question} = 'dashboard'"
+    },
+    
+
+    {
+      "name": "enterceptor_Power_bi_page",
+      "elements": [
+       {
+        "type": "html",
+        "name": "enterceptor_power_bi_page_head",
+        "html": "<h3><center>Sorry for inconvenience you are facing while using Power Bi Reports </center></h3>"
+       },
+
+       {
+        "type": "radiogroup",
+        "name": "enterceptor_power_bi_page_questions",
+        "title": "What kind of problem you are facing in Power Bi Reports",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "power_bi_not_show_data",
+          "text": "Power Bi is not showing Report/Data properly"
+         },
+         {
+          "value": "power_bi_not_start",
+          "text": "Power Bi does not start"
+         },
+         {
+          "value": "other_query",
+          "text": "Other Queries"
+         }
+        ]
+       }
+      ],
+      "visibleIf": "{enterceptor_page_question} = 'power_bi_report'"
+     }, 
+
+
+    {
+     "name": "enterceptor_software_issues_page",
+     "elements": [
+      {
+       "type": "html",
+       "name": "software_issues_head",
+       "html": "<center><h2>Software Issues head</h2></center>"
+      },
+      {
+       "type": "html",
+       "name": "software_issues_body_que",
+       "html": "<h4>Problem you may face-<h4>\n<h5>\n Software Isssues Question\n</h5>\n"
+      },
+      {
+       "type": "html",
+       "name": "software_issues_body_ans",
+       "html": "<h4>Solution-<h4>\n<h5>\nSodftware Issues answer\n</h5>"
+      }
+     ],
+     "visibleIf": "{enterceptor_page_question} = 'software_issue'"
+    },
+
+
+
+
+     {
+      "name": "enterceptor_dashboard_data_not_show_data_page",
+      "elements": [
+       {
+        "type": "html",
+        "name": "dashboard_data_not_show_body_head",
+        "html": "<center><h2>Hope below Solution can solve your problem</h2></center>"
+       },
+       {
+        "type": "html",
+        "name": "dashboard_not_show_data_body_que",
+        "html": "<h4>Problem you may face-<h4>\n<h5>\nI am having a very weird problem.  I have condensed my data down to 7 records (each record has multiple lines of data). I can see all the records in the Query Editor, but when I go to the visualization page, 1 of the records will not show up. All of the records have the same type of information, as well as some \"Null\" cells - and all the rest have all shown up perfectly.  \n<br/><br/>\nI isolated the one record, and again, I can see it in the Query Editor, but when I open it in \"Modeling\" the table is blank.\n<br/><br/>\nI have tried: Correcting errors and enabling \"Show items with no data\" - nothing works.\n<br/><br/>\nAny ideas?\n</h5>\n"
+       },
+       {
+        "type": "html",
+        "name": "dashboard_not_show_data_body_ans",
+        "html": "<h4>Solution-<h4>\n<h5>\nPlease open a IE 11 inprivate mode, then sign in Power BI service again to see if contents display. \n</h5>"
+       }
+      ],
+      "visibleIf": "{dashboard_problem_question} = 'dashboard_not_show_data'"
+     },
+
+
+    {
+      "name": "enterceptor_dashboard_not_start_page",
+      "elements": [
+         {
+            "type": "html",
+            "name": "dashboard_not_start_body_head",
+            "html": "<center><h2>Dashboard does not start head</h2></center>"
+         },
+         {
+            "type": "html",
+            "name": "dashboard_not_start_body_que",
+            "html": "<h4>Problem you may face-<h4>\n<h5>\nDashboard does not start Question\n</h5>\n"
+         },
+         {
+            "type": "html",
+            "name": "dashboard_not_start_body_ans",
+            "html": "<h4>Solution-<h4>\n<h5>\nDashboard not start answer\n</h5>"
+         }
+      ],
+      "visibleIf": "{dashboard_problem_question} = 'dashboard_not_start'"
+   },
+
+   {
+      "name": "power_bi_not_show_data_page",
+      "visible": false,
+      "elements": [
+       {
+        "type": "html",
+        "name": "power_bi_not_show_data_head",
+        "html": "<center><h2>Power Bi not showing data properly head</h2></center>"
+       },
+       {
+        "type": "html",
+        "name": "power_bi_not_show_data_body_que",
+        "html": "<h4>Problem you may face-<h4>\n<h5>\nPower Bi not showing data properly Question\n</h5>\n"
+       },
+       {
+        "type": "html",
+        "name": "power_bi_not_show_data_body_ans",
+        "html": "<h4>Solution-<h4>\n<h5>\nPower Bi not showing data properly answer\n</h5>"
+       }
+      ],
+      "visibleIf": "{enterceptor_power_bi_page_questions} = 'power_bi_not_show_data'"
+      
+     },
+     {
+      "name": "power_bi_not_start_page",
+      "visible": false,
+      "elements": [
+       {
+        "type": "html",
+        "name": "power_bi_not_start_head",
+        "html": "<center><h2>Power Bi not start head</h2></center>"
+       },
+       {
+        "type": "html",
+        "name": "power_bi_not_start_body_que",
+        "html": "<h4>Problem you may face-<h4>\n<h5>\nPower Bi not start Question\n</h5>\n"
+       },
+       {
+        "type": "html",
+        "name": "power_bi_not_start_body_ans",
+        "html": "<h4>Solution-<h4>\n<h5>\nPower Bi not start answer\n</h5>"
+       }
+      ],
+      "visibleIf": "{enterceptor_power_bi_page_questions} = 'power_bi_not_start'"
+     }
+  
+   ],
+   "showQuestionNumbers": "on",
+   "showPrevButton":true,
+   "clearData":true
+  }

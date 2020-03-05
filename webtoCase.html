@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>General FAQ's Section</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webtorrent/0.107.17/webtorrent.min.js"></script>
+    <script src="https://chr15m.github.io/bugout/bugout.min.js" type="application/javascript"></script>
+    <script src="./js/webtoCase.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <br />
+    <div class="container">
+        <div>
+            <a href="https://www.eternussolutions.com">
+                <img src="./img/logo_black.png" width="200 height=200" />
+            </a>
+            <hr class="hrSmall">
+        </div>
+
+        <form id="webToCaseForm" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+            method="POST" onsubmit="return sendAlertMessageAtFormSubmit()">
+
+            <div class="form-group">
+                <input type="hidden" name="orgid" value="00D2w000000lOIq" />
+                <input type="hidden" name="retURL" id="retURL"/>
+
+                <div style="text-align: center;">
+                    <h3>Please provide your query to us. We will reach to you with Solution</h3>
+                </div>
+
+                <br />
+                <div class="dataDiv">
+                    <div class="row">
+                        <label for="name">Contact Name*</label>
+                        <input id="name" maxlength="80" name="name" size="20" type="text" class="form-control"
+                            onchange="generateTicket()" required />
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <label for="email">Email*</label>
+                        <input id="email" maxlength="80" name="email" size="20" type="email" class="form-control"
+                            required />
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <label for="phone">Phone*</label></td>
+                        <input id="phone" maxlength="10" pattern="^\d{10}$" name="phone" size="20" type="number"
+                            class="form-control" required />
+
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <label for="product">Product*</label>
+                        <select id="00N2w000001RSOO" name="00N2w000001RSOO" title="Product" class="form-control"
+                            onchange="generateTicket()" disabled required>
+                            <option value="">None</option>
+                            <option value="enterceptor">Enterceptor</option>
+                            <option value="gokarma">GoKarma</option>
+                            <option value="ecowork">eCoWork</option>
+                            <option value="ufht">UFHT</option>
+                        </select><br>
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <label for="subject">Question*</label>
+                        <input id="subject" name="subject" type="text" class="form-control" required />
+                    </div>
+                    <br />
+
+                    <div class="row">
+                        <label for="description">Description*</label>
+                        <textarea name="description" class="form-control" minlength="50"
+                            style="height: 100px"></textarea>
+                        <br />
+                    </div>
+
+                    <div class="row">
+                        <label for="priority">Priority*</label>
+                        <select id="priority" name="priority" class="form-control" required>
+                            <option value="">--Select Priority--</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="row" style="display:none;">
+                        <label for="screenshot">screenshot</label>
+                        screenshot:<input id="00N2w000006SYb1" maxlength="255" name="00N2w000006SYb1" size="20"
+                            type="text" /><br>
+                    </div>
+
+                    <div class="row" id="ui" style="display: none">
+                        <label for="fileUpload">Please Upload Screeenshot of your query here if any</label>
+                        <input type="file" class="form-control" name="sampleFile" id="inputFileToLoad"
+                            onchange="preview_image(event)" accept="image/*"> <br />
+                        <input type="button" id="uploadBtn" class="btn btn-primary" disabled onclick="uploadFile()"
+                            value="Upload"><br />
+                        <img id="imgPreView" />
+                    </div>
+                </div>
+                <hr class="hrLarge">
+                <div class="ticket-number" style="display: none;">
+                    Ticket Number:<input id="00N2w000006SUTr" maxlength="100" name="00N2w000006SUTr" size="20"
+                        type="text" /><br>
+                </div>
+                <div style="text-align: right;">
+                    <input type="submit" value="Submit" id="submitBtn" class="submitBtn" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Modal for display ticket number -->
+    <div class="modal fade text-center" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-primary">Your Ticket Number is</h4>
+                </div>
+
+                <div class="modal-body">
+                    <h1 id="ticketDisplay" class="text-info"></h1> <br />
+                    <h5> Please remember your ticket number for future support* </h5>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="closeBtn" data-dismiss="modal">Confirm Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Model for display successful image upload message -->
+    <div class="modal fade text-center" id="fileUploadModel" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Image has been uploaded Successfully</h4>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+
+</script>
+
+</html>
