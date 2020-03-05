@@ -29,7 +29,7 @@ b.on("message", function (address, msg) {
   console.log("message:", address, msg);
   document.getElementById("uploadBtn").value = "Upload";
   NodeApiEndpoint += uploadedFileName;
-  //console.log(NodeApiEndpoint);
+  console.log(NodeApiEndpoint);
   document.getElementById(screenshotRef).value = NodeApiEndpoint;
   document.getElementById("submitBtn").disabled = false;
   b.destroy(function () {
@@ -102,7 +102,7 @@ sendAlertMessageAtFormSubmit = () => {
   //   return false;
   // } else {
   //document.getElementById('submitBtn').data-target = "#myModal"
-  document.getElementById("retURL").value= "http://help.eternussolutions.com/index.html?product="+product;  //setting up path after submitting form
+  document.getElementById("retURL").value= "http://192.168.100.61:5500/bugoutclient-surveyjs/index.html?product="+product;  //setting up path after submitting form
   document.getElementById('ticketDisplay').innerHTML = ticketNumber;
   onsubmit = $('#myModal').modal();
   document.getElementById('closeBtn').onclick = () => {
@@ -137,4 +137,6 @@ generateTicket = () => {
     document.getElementById('00N2w000006SUTr').value = ticketNumber;
   }
 }
+
+
 
