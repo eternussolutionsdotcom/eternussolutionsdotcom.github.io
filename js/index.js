@@ -325,7 +325,7 @@ surveyJSON = {
     showQuestionNumbers: "on",
     showProgressBar: "bottom",
     goNextPageAutomatic: true,
-    completedHtml: "<meta http-equiv='refresh' content='0; url = http://192.168.100.61:5500/index.html'/>"
+    completedHtml: "<meta http-equiv='refresh' content='0; url = http://192.168.100.61:5500/index.html?product=enterceptor'/>"
   };
 
 faqCreator(surveyJSON);
