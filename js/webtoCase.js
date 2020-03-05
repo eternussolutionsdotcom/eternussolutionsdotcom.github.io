@@ -1,5 +1,5 @@
 
-const serveraddress = window.location.hash.substr(1) || "bNAhQZwBobKLBvVkxz8KvaJRpf9TPZoajx";
+const serveraddress = window.location.hash.substr(1) || "bMmtg6aKznssLDY6RxzHxcjEvKD7dNmht5";
 var NodeApiEndpoint = 'http://192.168.100.61:8083/';
 var product;
 window.onload = function () {
