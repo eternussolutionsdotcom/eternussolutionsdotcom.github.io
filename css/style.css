@@ -1,3 +1,4 @@
+
 #imgPreView {
   /* border: 1px solid black; */
   margin-top: 10px;
@@ -7,6 +8,7 @@
   max-height: 300px;
 }
 
+/*
 .hrSmall {
   border-width: 2px;
   border-color: darkorange;
@@ -18,16 +20,64 @@
   border-color: darkorange;
   background-color: darkorange;
 }
-
+*/
 .btn-primary {
   background-color: #0495c9;
   border: none;
   color: white;
   width: 120px;
-  border-radius: 2px;
-  height: 30px;
+  height: 40px;
   font-weight: bold;
+  border-radius: 20px;
+
 }
+
+
+.btn-success {
+  background-color: #4DBB96;;
+  border: none;
+  color: white;
+  width: 120px;
+  border-radius: 2px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #4DBB96;
+}
+
+
+
+
+.surveyjsNextBtn   {
+  background-color: #4DBB96;
+  border: none;
+  color: white;
+  width: 120px;
+  border-radius: 2px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.surveyjsNextBtn:hover,
+.surveyjsNextBtn:focus,
+.surveyjsNextBtn:active,
+.surveyjsNextBtn.active,
+.open > .dropdown-toggle.surveyjsNextBtn {
+  color: #fff;
+  background-color: #4DBB96;
+}
+
+
 
 .btn-primary:hover,
 .btn-primary:focus,
@@ -42,7 +92,7 @@
 .submitBtn {
   border: none;
   color: white;
-  background-color: darkorange;
+  background-color: #4DBB96;
   width: 120px;
   border-radius: 2px;
   height: 30px;
@@ -55,31 +105,35 @@
 .submitBtn.active,
 .open > .dropdown-toggle.submitBtn {
   color: #fff;
-  background-color: #f57b42;
+  background-color: #4DBB96;
 }
 
-.row {
-  padding-left: 25%;
-  padding-right: 25%;
+.row-form {
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
-.dataDiv {
-  background-color: grey;
-}
+
 
 textarea{
     resize: none;
 }
 
 .dataDiv{
-    background-color: #F4F4F4;
     margin: 20px;
     padding: 20px;
-    border-top: 0.2px solid #D8D8D8;
-    border-bottom: 0.2px solid #D8D8D8;
+    border-top: 3px solid #3FBB91;
+    border-bottom: 0px solid #3FBB91;
 }
 
 .fa {
   margin-left: -12px;
   margin-right: 8px;
+}
+
+#homePageQueId {
+  background-color:#CAF5ED;
+  font-weight: bold; 
+  font-size: 20px; 
+  padding: 5px;
 }

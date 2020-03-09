@@ -5,11 +5,6 @@
          "name": "homepage",
          "elements": [
             {
-               "type": "html",
-               "name": "question1",
-               "html": "<center>\n<h2>Welcome to Gokarma FAQ's Section</h2>\n</center>\n"
-            },
-            {
                "type": "radiogroup",
                "name": "homepage_question",
                "title": "Which Product you are looking for?",
@@ -246,7 +241,5 @@
          "visibleIf": "{dashboard_problem_question} = \"dashboard_not_start\""
       }
 
-   ],
-   "showProgressBar": "bottom",
-   "goNextPageAutomatic": true
+   ]
 }

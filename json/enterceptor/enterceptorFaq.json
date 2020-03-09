@@ -6,14 +6,9 @@
      "name": "enterceptor_page",
      "elements": [
       {
-       "type": "html",
-       "name": "enterceptor_page_head",
-       "html": "<h3><center>Welcome to Enterceptor FAQ's Section</center></h3>"
-      },
-      {
        "type": "radiogroup",
        "name": "enterceptor_page_question",
-       "title": "Which kind of queries you have?",
+       "title": "What kind of query you have in Enterceptor?",
        "isRequired": true,
        "choices": [
         {
@@ -43,11 +38,6 @@
      "name": "enterceptor_dashboard_page",
      "elements": [
       {
-       "type": "html",
-       "name": "enterceptor_dashboard_page_head",
-       "html": "<h3><center>Sorry for inconvenience you are facing while using Dashboards </center></h3>"
-      },
-      {
        "type": "radiogroup",
        "name": "dashboard_problem_question",
        "title": "what kind of problems you are facing in dashboards?",
@@ -75,11 +65,6 @@
     {
       "name": "enterceptor_Power_bi_page",
       "elements": [
-       {
-        "type": "html",
-        "name": "enterceptor_power_bi_page_head",
-        "html": "<h3><center>Sorry for inconvenience you are facing while using Power Bi Reports </center></h3>"
-       },
 
        {
         "type": "radiogroup",
@@ -109,11 +94,6 @@
     {
      "name": "enterceptor_software_issues_page",
      "elements": [
-      {
-       "type": "html",
-       "name": "software_issues_head",
-       "html": "<center><h2>Software Issues head</h2></center>"
-      },
       {
        "type": "html",
        "name": "software_issues_body_que",

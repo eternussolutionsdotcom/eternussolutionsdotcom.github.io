@@ -1,5 +1,5 @@
-//Survey.StylesManager.applyTheme("modern");
-Survey.StylesManager.applyTheme("orange");
+Survey.StylesManager.applyTheme("modern");
+//Survey.StylesManager.applyTheme("orange");
 
 var url_string = window.location.href;
 var url = new URL(url_string);
@@ -7,7 +7,7 @@ var url = new URL(url_string);
 var product = url.searchParams.get("product");
 var webtoCasePartialUrl;  // url to create web to case form according to product selected
 
-faqCreator = (surveyJSON, webtoCasePartialUrl) => {
+function faqCreator (surveyJSON, webtoCasePartialUrl)   {
   window.survey = new Survey.Model(surveyJSON);
   survey.showTitle = false;
   survey.onComplete.add(function (result) {
@@ -19,17 +19,19 @@ faqCreator = (surveyJSON, webtoCasePartialUrl) => {
       // document.querySelector("#surveyResult").textContent =
       // "Result JSON:\n" + JSON.stringify(result.data, null, 3);
   });
+
   $("#surveyElement").Survey({ model: survey });
+  //document.getElementById('surveyElement').Survey({ model : survey})
 }
 
 
 var surveyJSON;
 if (product == "enterceptor") {
     const request = async () => {
-        const response = await fetch("./json/enterceptorFaq.json");
+        const response = await fetch("./json/enterceptor/enterceptorFaq.json");
         const json = await response.json();
         surveyJSON = JSON.stringify(json);
-        //console.log(surveyJSON);
+        console.log(surveyJSON);
         webtoCasePartialUrl = '?product=enterceptor';
         faqCreator(surveyJSON, webtoCasePartialUrl);
     };
@@ -38,7 +40,7 @@ if (product == "enterceptor") {
 
 else if(product == "gokarma"){
     const request = async () => {
-        const response = await fetch("./json/gokarmaFaq.json");
+        const response = await fetch("./json/gokarma/gokarmaFaq.json");
         const json = await response.json();
         surveyJSON = JSON.stringify(json);
         //console.log(surveyJSON);
@@ -50,7 +52,7 @@ else if(product == "gokarma"){
 
 else if(product == "ufht"){
     const request = async () => {
-        const response = await fetch("./json/ufht.json");
+        const response = await fetch("./json/ufht/ufht.json");
         const json = await response.json();
         surveyJSON = JSON.stringify(json);
         //console.log(surveyJSON);
@@ -62,7 +64,7 @@ else if(product == "ufht"){
 
 else if(product == "ecowork"){
     const request = async () => {
-        const response = await fetch("./json/ecoworkFaq.json");
+        const response = await fetch("./json/ecowork/ecoworkFaq.json");
         const json = await response.json();
         surveyJSON = JSON.stringify(json);
         //console.log(surveyJSON);
