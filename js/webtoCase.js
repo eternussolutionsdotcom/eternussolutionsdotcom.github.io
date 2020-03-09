@@ -116,13 +116,13 @@ generateTicket = () => {
   let name = document.getElementById('name').value;
   if (product != '' && name != '') {
     if (product === 'enterceptor') {
-      product = 'ente'
+      product = 'ent-'
     } else if (product === 'gokarma') {
-      product = 'goka'
+      product = 'gok-'
     } else if (product === 'ecowork') {
-      product = 'ecow'
+      product = 'eco-'
     } else {
-      product = 'ufht'
+      product = 'ufh-'
     }
     //var timeInMillisec = Math.floor(Date.now() / 1000);
     var randomNumber = Math.floor(1000 + Math.random() * 9000)
